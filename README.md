@@ -13,7 +13,7 @@ C 언어에서 정수 입력 시, 해당 정수 이하의 모든 소수를 출�
 ---
 
 
-### 레포지토리 구조
+### 📁 파일 구조
 
 ```bash
 ├── static
@@ -44,7 +44,7 @@ C 언어에서 정수 입력 시, 해당 정수 이하의 모든 소수를 출�
 ```
 
 ### 코드 설명
-#### print_primes.h
+`print_primes.h`
 다음의 .h 파일은 print_primes_up_to() 함수 프로토 타입을 선언합니다.
 ```c
 #ifndef PRINT_PRIMES_H
@@ -54,7 +54,7 @@ void print_primes_up_to(int N);
 
 #endif
 ```
-#### print_primes.c
+`print_primes.c`
 다음의 .c 파일은 헤더 파일을 포함하고, 함수 본문을 구현합니다.
 입력된 정수 N 이하(2~N) 의 모든 소수를, 이미 찾은 소수들만으로 나눠보는 방식으로 판별하고 출력하는 함수입니다.
 ```c
@@ -96,7 +96,7 @@ void print_primes_up_to(int N) {
     }
 }
 ```
-#### main.c
+`main.c`
 라이브러리를 사용하는 main 코드 입니다.
 print_primes_up_to() 함수를 사용하여 N 이하의 모든 소수를 출력합니다.
 ```c
@@ -118,7 +118,7 @@ int main(void) {
     return 0;
 }
 ```
-#### main_runtime.c
+`main_runtime.c`
 Runtime Linking에 사용하는 main 코드 입니다.
 dlopen과 dlsym을 사용해 런타임에 동적으로 라이브러리를 로드하고 print_primes_up_to 함수를 호출합니다.
 ```c
