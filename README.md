@@ -1,4 +1,4 @@
-# 2025-2 System Programming Project (CSE3209-001)
+# 2025-2 System Programming (CSE3209-001)
 
 본 문서는 인하대학교 **시스템프로그래밍(CSE3209)** 교과목의 Static Linking, Dynamic Linking, Runtime Linking에 관한 구현 내용을 포함합니다.  
 
