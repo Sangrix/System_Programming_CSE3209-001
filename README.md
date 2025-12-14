@@ -1,6 +1,7 @@
 # 2025-2 System Programming Project (CSE3209-001)
 
 본 문서는 인하대학교 **시스템프로그래밍(CSE3209)** 교과목의 Static Linking, Dynamic Linking, Runtime Linking에 관한 구현 내용을 포함합니다.  
+
 C 언어에서 정수 입력 시, 해당 정수 이하의 모든 소수를 출력해주는 함수를 디자인하고 링킹하는 과정을 설명합니다.
 
 ---
@@ -58,6 +59,7 @@ void print_primes_up_to(int N);
 `print_primes.c`
 
 다음의 .c 파일은 헤더 파일을 포함하고, 함수 본문을 구현합니다.
+
 입력된 정수 N 이하(2~N) 의 모든 소수를, 이미 찾은 소수들만으로 나눠보는 방식으로 판별하고 출력하는 함수입니다.
 ```c
 #include "print_primes.h"
@@ -101,6 +103,7 @@ void print_primes_up_to(int N) {
 `main.c`
 
 라이브러리를 사용하는 main 코드 입니다.
+
 print_primes_up_to() 함수를 사용하여 N 이하의 모든 소수를 출력합니다.
 ```c
 #include <stdio.h>
@@ -124,6 +127,7 @@ int main(void) {
 `main_runtime.c`
 
 Runtime Linking에 사용하는 main 코드 입니다.
+
 dlopen과 dlsym을 사용해 런타임에 동적으로 라이브러리를 로드하고 print_primes_up_to 함수를 호출합니다.
 ```c
 #include <stdio.h>
