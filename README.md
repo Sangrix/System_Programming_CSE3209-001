@@ -170,6 +170,8 @@ int main() {
 ```
 ## Static Linking
 해당 실행 과정은 static 폴더에서 이루어집니다.
+
+정적 라이브러리(.a)를 만들고, 그 라이브러리를 실행파일에 정적 링킹해서 단일 실행파일을 만드는 과정입니다.
 ```bash
 $ gcc -Og -c print_primes.c -o print_primes.o
 $ ar -rcs libprime.a print_primes.o
@@ -179,6 +181,8 @@ $ gcc -static main.c -L. -lprime -o main_static
 
 ## Dynamic Linking
 해당 실행 과정은 dynamic 폴더에서 이루어집니다.
+
+공유 라이브러리(.so)를 만들고, 실행파일을 그 라이브러리에 동적 링킹해서 런타임에 로더가 .so를 찾도록 환경변수를 설정하는 과정입니다.
 ```bash
 $ gcc -Og -c -fPIC print_primes.c -o print_primes.o
 $ gcc -shared -o libprime.so print_primes.o
@@ -189,8 +193,10 @@ $ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
 ## Runtime Linking
 해당 실행 과정은 runtime 폴더에서 이루어집니다.
+
+공유 라이브러리(.so)를 만들고, 별도로 런타임 동적 로딩(dlopen/dlsym)을 사용하는 실행파일을 만든 뒤 실행 시 로더가 .so를 찾도록 설정하는 과정입니다.
 ```bash
-$ gcc -fPIC -C print_primes.c -o print_primes.o
+$ gcc -fPIC -c print_primes.c -o print_primes.o
 $ gcc -shared -o libprime.so print_primes.o
 $ gcc -rdynamic -o main_runtime main_runtime.c -ldl
 $ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
