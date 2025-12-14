@@ -47,7 +47,7 @@
 ### 코드 설명
 `print_primes.h`
 
-다음의 .h 파일은 print_primes_up_to() 함수 프로토 타입을 선언합니다.
+해당 .h 파일은 print_primes_up_to() 함수 프로토 타입을 선언합니다.
 ```c
 #ifndef PRINT_PRIMES_H
 #define PRINT_PRIMES_H
@@ -58,7 +58,7 @@ void print_primes_up_to(int N);
 ```
 `print_primes.c`
 
-다음의 .c 파일은 헤더 파일을 포함하고, 함수 본문을 구현합니다.
+해당 .c 파일은 헤더 파일을 포함하고, 함수 본문을 구현합니다.
 
 입력된 정수 N 이하(2~N) 의 모든 소수를, 이미 찾은 소수들만으로 나눠보는 방식으로 판별하고 출력하는 함수입니다.
 ```c
