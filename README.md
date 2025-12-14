@@ -165,7 +165,7 @@ int main() {
 }
 ```
 ## Static Linking
-해당 과정의 실행은 static 폴더에서 이루어집니다.
+해당 실행 과정은 static 폴더에서 이루어집니다.
 ```bash
 $ gcc -Og -c print_primes.c -o print_primes.o
 $ ar -rcs libprime.a print_primes.o
@@ -174,7 +174,7 @@ $ gcc -static main.c -L. -lprime -o main_static
 <img width="2024" height="674" alt="static_linking" src="https://github.com/user-attachments/assets/54d1d0be-83d6-4973-9338-c5e959727a7d" />
 
 ## Dynamic Linking
-해당 과정의 실행은 dynamic 폴더에서 이루어집니다.
+해당 실행 과정은 dynamic 폴더에서 이루어집니다.
 ```bash
 $ gcc -Og -c -fPIC print_primes.c -o print_primes.o
 $ gcc -shared -o libprime.so print_primes.o
@@ -184,7 +184,7 @@ $ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 <img width="2130" height="716" alt="dynamic_linking" src="https://github.com/user-attachments/assets/3fd808d7-f701-4f25-a311-b7f8021915e4" />
 
 ## Runtime Linking
-해당 과정의 실행은 runtime 폴더에서 이루어집니다.
+해당 실행 과정은 runtime 폴더에서 이루어집니다.
 ```bash
 $ gcc -fPIC -C print_primes.c -o print_primes.o
 $ gcc -shared -o libprime.so print_primes.o
